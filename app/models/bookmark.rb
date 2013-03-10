@@ -13,8 +13,7 @@ class Bookmark < ActiveRecord::Base
   validates_presence_of :url
 
   def check_for_http
-    self.url.gsub('s:', ':')
-    if !self.url.include?('http://') # && !self.url.include?('https://')        
+    if !self.url.include?('http://') && !self.url.include?('https://')        
       self.url.prepend('http://')
     end
   end
