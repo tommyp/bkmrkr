@@ -1,0 +1,14 @@
+= simple_form_for @bookmark do |f|
+  - if @bookmark.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@bookmark.errors.count, "error")} prohibited this bookmark from being saved:"
+      %ul
+        - @bookmark.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.input :url, placeholder: 'URL', label: false
+  .field
+    = f.input :tag_list, label: false, placeholder: 'Tags, comma seperated'
+  .actions
+    = f.submit 'Submit'

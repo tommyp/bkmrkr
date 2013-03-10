@@ -1,0 +1,12 @@
+= link_to '&laquo; back'.html_safe, root_path, class: 'back'
+
+%h1
+  Your bookmarks from 
+  = @domain.to_s
+
+.search
+  %input#search{placeholder: 'Search'}
+
+.bookmarks
+  - @domain.bookmarks.each do |bookmark|
+    = render bookmark

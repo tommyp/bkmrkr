@@ -1,0 +1,9 @@
+.index
+  %h1 Your bookmarks
+
+  .search
+    %input#search{placeholder: 'Search'}
+
+  .bookmarks  
+    - @bookmarks.each do |bookmark|
+      = render bookmark

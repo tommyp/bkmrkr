@@ -1,0 +1,10 @@
+.bookmark
+  = link_to bookmark.to_s, bookmark.url, class: 'url'
+  %p
+    from 
+    = link_to bookmark.domain.to_s, domain_path(bookmark.domain)
+  %ul.tags
+    - bookmark.tags.each do |tag|
+      %li= link_to tag.name, tag_path(tag.name)
+  = link_to 'Delete', bookmark, method: :delete, data: { confirm: 'Are you sure?' }, class: 'delete'
+  .clearfix

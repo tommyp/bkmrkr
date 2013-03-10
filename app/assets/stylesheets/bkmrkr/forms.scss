@@ -1,0 +1,29 @@
+.field {
+  margin-bottom: 2em;
+  input {
+    width: 100%;
+    font-size: 26px;
+    padding: 16px 10px;
+    border-radius: 6px;
+    text-shadow: none;
+    border: 1px solid #1b1b1b;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.actions {
+  input {
+    font-size: 26px;
+    margin: 1em 0 0 0;
+    color: #1b1b1b;
+    background: #ffffbf;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 0;
+    float: right;
+  }
+}
