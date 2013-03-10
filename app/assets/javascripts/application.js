@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bkmrkr
 //= require searcher
 
 $(document).ready( function() {

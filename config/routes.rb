@@ -1,6 +1,6 @@
 Bkmrkr::Application.routes.draw do
 
-  resources :bookmarks, :except => [:show]
+  resources :bookmarks, :except => [:show, :edit, :update]
   match '/domains/:id' => 'domains#show', :as => :domain
   match '/tags/:tag' => 'tags#show', :as => :tag
 

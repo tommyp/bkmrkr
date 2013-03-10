@@ -1,6 +1,6 @@
 // Searcher use:
 // 
-// Pass jQuery objects to the settings
+// Call plugin on the input element and pass jQuery objects to the settings
 // 
 // $('#search').searcher({
 //   'container' : $('ul'), 
@@ -18,6 +18,10 @@
       'item' : null,
       'text' : null
     }, options);
+
+    jQuery.expr[":"].Contains = function(a, i, m) {
+      return (a.textContent || a.innerText || "").toUpperCase().indexOf(m[3].toUpperCase()) >= 0;
+    };
 
     this.each(function() {
       var $this = $(this);
