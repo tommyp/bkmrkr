@@ -15,9 +15,5 @@
 //= require searcher
 
 $(document).ready( function() {
-  $('#search').searcher({
-    'container' : $('.bookmarks'), 
-    'item'      : $('.bookmark'),
-    'text'      : $('.url')
-  });
+  $('#search').searcher();
 })

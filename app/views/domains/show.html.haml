@@ -5,7 +5,7 @@
   = @domain.to_s
 
 .search
-  %input#search{placeholder: 'Search'}
+  %input#search{placeholder: 'Search', data: {container: '.bookmarks', item: '.bookmark', text: '.url'}}
 
 .bookmarks
   - @domain.bookmarks.each do |bookmark|

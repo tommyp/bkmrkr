@@ -2,7 +2,7 @@
   %h1 Your bookmarks
 
   .search
-    %input#search{placeholder: 'Search'}
+    %input#search{placeholder: 'Search', data: {container: '.bookmarks', item: '.bookmark', text: '.url'}}
 
   .bookmarks  
     - @bookmarks.each do |bookmark|
